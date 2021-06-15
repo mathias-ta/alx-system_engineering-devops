@@ -1,2 +1,2 @@
 #!/bin/bash
-rm '\*\\'\"Holberton School"\'\\*$\?\*\*\*\*\*:)\'
+rm "\*\\'\"Holberton School"\'\\'*$'\?\*\*\*\*\*':)'\"
