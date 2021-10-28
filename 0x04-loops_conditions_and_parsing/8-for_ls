@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Script lists content in current directory after the first dash -
+
+cont="$(ls)"
+for c in $cont;
+do
+	echo "$c" | cut -d "-" -f2
+done
