@@ -17,7 +17,7 @@ trap "sigint_msg" SIGINT
 sigquit_msg()
 {
 	rm -f /var/run/myscript.pid
-	kill $$
+	exit
 }
 
 echo $$ >> /var/run/myscript.pid
