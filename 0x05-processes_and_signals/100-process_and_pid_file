@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# script desplays "To infinity and beyond" infinitly with a sleep 2
+# "I am invincible!!!" when receiving a SIGTERM signal
+
+echo $$ >> /var/run/myscript.pid
+
+sigterm_msg()
+{
+	echo "I the kill command"
+}
+trap "sigterm_msg" SIGTERM
+
+sigint_msg()
+{
+	echo "Y U no love me?!"
+}
+trap "sigint_msg" SIGINT
+
+sigquit_msg()
+{
+	rm /var/run/myscript.pid
+	kill $$
+}
+
+while true; do
+	echo "To infinity and beyond"
+	sleep 2
+done
