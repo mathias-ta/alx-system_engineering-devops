@@ -4,7 +4,7 @@
 
 remove_and_quit()
 {
-    rm -f /var/run/holbertonscript.pid;
+    rm -f /var/run/myscript.pid;
     exit
 }
 trap "echo 'Y U no love me?!'" SIGINT
