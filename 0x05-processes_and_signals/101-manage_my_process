@@ -6,13 +6,12 @@ tmpfile="/var/run/my_process.pid"
 
 startLoop()
 {
-	./manage_my_process &
-	echo "$!" > "$tmpfile"
+	./manage_my_process & echo "$!" > "$tmpfile"
 }
 killLoop()
 {
 	sudo pkill -f "./manage_my_process"
-	rm -r /root/var/run/my_process.pid
+	rm -f "$tmpfile"
 }
 case "$argv1" in
 	start) echo "manage_my_process started"
