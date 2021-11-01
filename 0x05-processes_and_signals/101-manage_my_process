@@ -12,7 +12,7 @@ startLoop()
 killLoop()
 {
 	sudo pkill -f "./manage_my_process"
-	rm -f /var/run/my_process.pid
+	rm -r /var/run/my_process.pid
 }
 case "$argv1" in
 	start) echo "manage_my_process started"
