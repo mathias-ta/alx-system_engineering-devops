@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
-# Match "School"
+# Match "hbtn", "htn" not "hbbtn"
 
-puts ARGV[0].scan(/hb{1,2}tn/).join
+puts ARGV[0].scan(/hb?tn/).join
